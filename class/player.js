@@ -77,8 +77,15 @@ class Player {
 
     eatItem(itemName) {
         // Allow the player to eat food items, but not non-food items
-
-        // Your code here
+        console.log('player items', this.items)
+        if (this.items[0] instanceof Food) {
+            console.log('player items', this.items)
+            this.items.splice(0)
+            // console.log(`Player eats ${itemName}`)
+            // this.items.getItemByName(this.name);
+        } else {
+            console.log(`This is not food!`)
+        }
     }
 
     getItemByName(name) {
@@ -90,6 +97,7 @@ class Player {
             }
         }
         console.log("Item not found");    }
+
 }
 
 module.exports = {
