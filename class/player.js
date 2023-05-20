@@ -35,15 +35,44 @@ class Player {
 
     takeItem(itemName) {
         // Picks up an item from the current room into the player's inventory
-
-        // Your code here
-        // this.items.push(itemName);
+        console.log(this.currentRoom)
+        let item = this.currentRoom.getItemByName(itemName);
+        if (item) {
+            this.items.push(item);
+            console.log(`You took ${item.name}`)
+        }
     }
 
     dropItem(itemName) {
         // Drops an item the player is holding into their current room
 
-        // Your code here
+        // const currentRoomItems = this.currentRoom.items;
+        // console.log('currentRoomItems', currentRoomItems)
+        // const getItem = currentRoomItems.splice(0,1)[0];
+        // console.log('getItem', getItem)
+        // return this.items.push(getItem)
+        let item = this.currentRoom.getItemByName(itemName);
+        const currentPlayerItems = this.items;
+        if(this.getItemByName(itemName)) {
+            splice
+        }
+        const currentRoomItems = this.currentRoom.items;
+
+
+        // Yakes
+        // const item = this.getItemByItemName(itemName);
+        // this.removeItem(item);
+        // this.currentRoom.addItem(item);
+
+    }
+
+    addItem(item) {
+        this.items
+    }
+
+    removeItem(item) {
+        const index = this.items.indexOf(item);
+
     }
 
     eatItem(itemName) {
@@ -54,9 +83,13 @@ class Player {
 
     getItemByName(name) {
         // Retrieves an item from a player's inventory by item name
-
-        // Your code here
-    }
+        for (let i = 0 ; i < this.items.length ; i++) {
+            let item = this.items[i];
+            if (item.name.toLowerCase().startsWith(name)) {
+                return this.items.splice(i, 1)[0];
+            }
+        }
+        console.log("Item not found");    }
 }
 
 module.exports = {

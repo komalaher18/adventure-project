@@ -44,11 +44,7 @@ class Room {
     }
 
     getItemByName(name) {
-        // Retrieves an item from a room by item name
-
-        // Your code here
         // return this.items.find((item) => item.name === name);
-
         for(let i = 0; i < this.name.length; i++){
             let item = this.items[i];
             if(item.name = name){
@@ -56,10 +52,12 @@ class Room {
             }
         }
         console.log("item not found ");
-
-
     }
 
+    removeItem(item) {
+        const index = this.items.index(item);
+        this.items.splice(i, 1)
+    }
 }
 // const item =  new Room.getItemByName()
 // console.log(item)
