@@ -40,7 +40,10 @@ class World {
         // Instantiate items using data stored in the itemList variable
             // A non-food item should be instantiated as an instance of the `Item` class
             // A food item should be instantiated as an instance of the `Food` class
+        const mapleSyrup = new Food('Mayple Syrup', 'A sugary liquid');
 
+        const shield = new Item('Shield', 'Something To Protect Yourself');
+        
         // Your code here
     }
 }
