@@ -47,10 +47,22 @@ class Room {
         // Retrieves an item from a room by item name
 
         // Your code here
+        // return this.items.find((item) => item.name === name);
+
+        for(let i = 0; i < this.name.length; i++){
+            let item = this.items[i];
+            if(item.name = name){
+                return this.items.splice(i, 1)[0];
+            }
+        }
+        console.log("item not found ");
+
+
     }
 
 }
-
+// const item =  new Room.getItemByName()
+// console.log(item)
 module.exports = {
   Room,
 };

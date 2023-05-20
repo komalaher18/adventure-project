@@ -37,6 +37,7 @@ class Player {
         // Picks up an item from the current room into the player's inventory
 
         // Your code here
+        // this.items.push(itemName);
     }
 
     dropItem(itemName) {
